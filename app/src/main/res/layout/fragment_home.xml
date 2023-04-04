@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+  <ScrollView
+      android:id="@+id/scrollview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="10dp"
+             android:text="Bộ sưu tập"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+         <ViewFlipper
+             android:id="@+id/viewflipper"
+             android:layout_width="match_parent"
+             android:layout_height="600dp">
+
+             <ImageView
+                 android:id="@+id/img1"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/img4"/>
+
+             <ImageView
+                 android:id="@+id/img2"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/img3"/>
+
+             <ImageView
+                 android:id="@+id/img3"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/img2"/>
+
+             <ImageView
+                 android:id="@+id/img4"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerCrop"
+                 android:src="@drawable/img1"/>
+         </ViewFlipper>
+
+<!--         Danh mục sản phẩm-->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                 <TextView
+                     android:id="@+id/tv_next"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="132dp"
+                     android:text="Xem thêm >>>"
+                     app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                     app:layout_constraintStart_toEndOf="@+id/textView2"
+                     app:layout_constraintTop_toTopOf="@+id/textView2"
+                     app:layout_constraintVertical_bias="0.666" />
+
+                 <TextView
+                     android:id="@+id/textView2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="16dp"
+                     android:layout_marginTop="4dp"
+                     android:paddingTop="10dp"
+                     android:text="Danh mục nỗi bật"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/rv_category"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="8dp"
+                     android:paddingStart="20dp"
+                     android:paddingEnd="20dp"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                 </androidx.recyclerview.widget.RecyclerView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                 <TextView
+                     android:id="@+id/tv_next2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="132dp"
+                     android:text="Xem thêm >>>"
+                     app:layout_constraintBottom_toBottomOf="@+id/tv_3"
+                     app:layout_constraintStart_toEndOf="@+id/tv_3"
+                     app:layout_constraintTop_toTopOf="@+id/tv_3"
+                     app:layout_constraintVertical_bias="0.666" />
+
+                 <TextView
+                     android:id="@+id/tv_3"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="16dp"
+                     android:layout_marginTop="16dp"
+                     android:paddingTop="10dp"
+                     android:text="Sản phẩm nỗi bật"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:id="@+id/rv_bestseller"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="8dp"
+                     android:paddingStart="20dp"
+                     android:paddingEnd="20dp"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@+id/tv_3">
+
+                 </androidx.recyclerview.widget.RecyclerView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+                 <ImageView
+                     android:id="@+id/imageView3"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="16dp"
+                     android:layout_marginTop="32dp"
+                     android:layout_marginEnd="16dp"
+                     android:layout_marginBottom="50dp"
+                     android:src="@drawable/pic_info"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+         </LinearLayout>
+     </LinearLayout>
+  </ScrollView>
+</FrameLayout>
